@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Sarvacharya Admin Dashboard</title>
+    <!-- Custom styles for this template -->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        #module {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+
+        #module #collapseExample.collapse:not(.show) {
+            display: block;
+            height: 3rem;
+            overflow: hidden;
+        }
+
+        #module #collapseExample.collapsing {
+            height: 3rem;
+        }
+
+        #module a.collapsed::after {
+            content: '+ Show More';
+        }
+
+        #module a:not(.collapsed)::after {
+            content: '- Show Less';
+        }
+    </style>
+</head>
+
+
+<body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Welcome to Sarvacharya</div>
+            </a>
+
+            <!-- Divider -->
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+            <!-- Divider -->
+            <hr class="sidebar-divider" />
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Addons
+            </div>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Contact Us</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="blog.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Blogs</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block" />
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+        </ul>
+        <div id="content-wrapper" class="d-flex flex-column">
+            <!-- Main Content -->
+            <div id="content">
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal"
+                                id="btn-logout">
+                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <a type="button" data-dismiss="modal">X</a>
+                            </div>
+                            <form class="p-4">
+                                <div class="form-group">
+                                    <label for="url">Img Url</label>
+                                    <input type="url" class="form-control-file" id="url" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="title">Title</label>
+                                    <input type="text" class="form-control" id="title" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="blogs">Blog Text</label>
+                                    <textarea class="form-control" id="blogs" rows="3"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+                    <div class="card shadow mb-4">
+                        <div class="card-body justify-content-center">
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#exampleModal">
+                                Add Blogs
+                            </button>
+                            <div class="row">
+                                <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+                                    <div class="card">
+                                        <img class="card-img-top" src="https://picsum.photos/200/150/?random">
+                                        <div id="module" class="container mt-3">
+                                            <p class="collapse" id="collapseExample" aria-expanded="false">
+                                                Bacon ipsum dolor amet doner picanha tri-tip biltong leberkas salami
+                                                meatball tongue filet mignon landjaeger tail. Kielbasa salami tenderloin
+                                                picanha spare ribs, beef ribs strip steak jerky cow. Pork chop chicken
+                                                ham hock beef ribs turkey jerky. Shoulder
+                                                beef capicola doner, tongue tail sausage short ribs andouille. Rump
+                                                frankfurter landjaeger t-bone, kielbasa doner ham hock shankle venison.
+                                                Cupim capicola kielbasa t-bone, ball tip chicken andouille venison pork
+                                                chop doner bacon beef ribs kevin shankle.
+                                                Short loin leberkas tenderloin ground round shank, brisket strip steak
+                                                ham hock ham.
+                                            </p>
+                                            <a role="button" class="collapsed btn btn-primary btn-sm"
+                                                data-toggle="collapse" href="#collapseExample" aria-expanded="false"
+                                                aria-controls="collapseExample">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-auth.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="js/index.js"></script>
+
+    <script>
+        var _0x4477 = ['18468UzJabJ', 'onAuthStateChanged', 'href', '675162biKGZz', '462708bhDNDV', 'auth', '1Hojltb', '648944ouiFWy', '42839guUBVU', '690551XBSDbd', 'login.html', 'location', '3XhgfLb', '1919942cyaYYh', '1HGFfhF']; var _0x301c = function (_0x322f43, _0x135f4f) { _0x322f43 = _0x322f43 - 0x1f0; var _0x44770a = _0x4477[_0x322f43]; return _0x44770a; }; var _0x4b7b63 = _0x301c; (function (_0x39c88c, _0x18d07a) { var _0x507203 = _0x301c; while (!![]) { try { var _0x3e8319 = parseInt(_0x507203(0x1fa)) + parseInt(_0x507203(0x1fc)) * parseInt(_0x507203(0x1f6)) + parseInt(_0x507203(0x1fe)) * -parseInt(_0x507203(0x1f3)) + parseInt(_0x507203(0x1f0)) + parseInt(_0x507203(0x1f9)) + parseInt(_0x507203(0x1fd)) + -parseInt(_0x507203(0x1f4)) * parseInt(_0x507203(0x1f5)); if (_0x3e8319 === _0x18d07a) break; else _0x39c88c['push'](_0x39c88c['shift']()); } catch (_0x591627) { _0x39c88c['push'](_0x39c88c['shift']()); } } }(_0x4477, 0x6d38e), firebase[_0x4b7b63(0x1fb)]()[_0x4b7b63(0x1f7)](function (_0x3e3451) { var _0x3f41ee = _0x4b7b63; !_0x3e3451 && (window[_0x3f41ee(0x1f2)][_0x3f41ee(0x1f8)] = _0x3f41ee(0x1f1)); }));
+    </script>
+
+</body>
+
+</html>
